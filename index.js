@@ -14,7 +14,7 @@ module.exports = {
   included: function(app) {
     // console.log('d3-arrays included', app);
 
-    this.app.import(path.join(this.app.project.nodeModulesPath, 'd3-arrays', 'src', 'index.js'));
+    // this.app.import(path.join(this.app.project.nodeModulesPath, 'd3-arrays', 'src', 'index.js'));
 
     // var options = this.app.options.icAjaxOptions || {enabled: true};
 
