@@ -10,6 +10,8 @@ module.exports = {
   },
 
   included: function(app) {
+    console.log('d3-arrays included', app);
+
     // var options = this.app.options.icAjaxOptions || {enabled: true};
 
     // if (options.enabled) {

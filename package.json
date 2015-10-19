@@ -13,7 +13,8 @@
   "keywords": [
     "ember-shim",
     "d3",
-    "ember"
+    "ember",
+    "ember-addon"
   ],
   "author": "Ivan Vanderbyl",
   "license": "ISC",
@@ -22,6 +23,6 @@
   },
   "homepage": "https://github.com/ivanvanderbyl/ember-d3-arrays-shim",
   "dependencies": {
-    "d3-arrays": "^0.0.4"
+    "d3-arrays": "ivanvanderbyl/d3-arrays"
   }
 }
