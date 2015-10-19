@@ -6,10 +6,10 @@ var path = require('path');
 module.exports = {
   name: 'Ember D3 Arrays Shim',
 
-  // init: function(name) {
-  //   var assets_path = require('path').join('d3-arrays','src','index.js');
-  //   this.treePaths.vendor = require.resolve('d3-arrays').replace(assets_path, '');
-  // },
+  init: function(name) {
+    var assets_path = require('path').join('d3-arrays','index.js');
+    this.treePaths.vendor = require.resolve('d3-arrays').replace(assets_path, '');
+  },
 
   included: function(app) {
     // console.log('d3-arrays included', app);
