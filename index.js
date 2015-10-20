@@ -21,6 +21,7 @@ var d3ArraysFactory = require('d3-arrays');
     // Just return a value to define the module export.
     // This example returns an object, but the module
     // can return a function as the exported value.
+    d3ArraysFactory.name = 'ember-d3-arrays-shim';
     return d3ArraysFactory;
 }));
 
