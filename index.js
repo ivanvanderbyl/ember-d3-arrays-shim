@@ -1,8 +1,8 @@
 /* jshint node: true */
 'use strict';
 
-var d3ArraysFactory = require('d3-arrays');
-export * from d3ArraysFactory;
+// var d3ArraysFactory = require('d3-arrays');
+// export * from d3ArraysFactory;
 
 // (function (root, factory) {
 //     if (typeof define === 'function' && define.amd) {
@@ -27,8 +27,8 @@ export * from d3ArraysFactory;
 
 // var path = require('path');
 
-// module.exports = {
-//   name: 'Ember D3 Arrays Shim',
+module.exports = {
+  name: 'ember-d3-arrays-shim',
 
 //   init: function(name) {
 //     var assets_path = require('path').join('d3-arrays','index.js');
@@ -56,4 +56,4 @@ export * from d3ArraysFactory;
 //     //   });
 //     // }
 //   }
-// };
+};
