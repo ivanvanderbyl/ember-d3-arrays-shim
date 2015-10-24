@@ -1,7 +1,7 @@
 {
   "name": "ember-d3-arrays-shim",
-  "version": "1.0.0",
-  "description": "Shim for Ember to import D3 v4 Arrays",
+  "version": "0.0.4",
+  "description": "ES2015 shim to load D3 Arrays in your Ember CLI app",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,13 +17,13 @@
     "ember-addon"
   ],
   "author": "Ivan Vanderbyl",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ivanvanderbyl/ember-d3-arrays-shim/issues"
   },
   "homepage": "https://github.com/ivanvanderbyl/ember-d3-arrays-shim",
   "dependencies": {
     "broccoli-merge-trees": "^0.2.3",
-    "d3-arrays": "0.0.4"
+    "d3-arrays": "^0.0.4"
   }
 }
