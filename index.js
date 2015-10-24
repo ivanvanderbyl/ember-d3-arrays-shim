@@ -1,60 +1,20 @@
 /* jshint node: true */
 'use strict';
 
-var d3ArraysFactory = require('d3-arrays');
+var path = require('path');
+var mergeTrees = require('broccoli-merge-trees');
 
-(function (root, factory) {
-    if (typeof define === 'function' && define.amd) {
-        // AMD. Register as an anonymous module.
-        define([], factory);
-    } else if (typeof module === 'object' && module.exports) {
-        // Node. Does not work with strict CommonJS, but
-        // only CommonJS-like environments that support module.exports,
-        // like Node.
-        module.exports = factory();
-    } else {
-        // Browser globals (root is window)
-        root.returnExports = factory();
+module.exports = {
+  name: 'd3-arrays',
+
+  treeForAddon: function(tree) {
+    var packagePath = path.join(this.project.addonPackages['ember-d3-arrays-shim'].path, 'node_modules', 'd3-arrays', 'src');
+    var d3ArraysTree = this.treeGenerator(packagePath);
+
+    var trees = mergeTrees([d3ArraysTree, tree], {
+      overwrite: true
+    });
+
+    return this._super.treeForAddon.call(this, trees);
   }
-}(this, function () {
-
-    // Just return a value to define the module export.
-    // This example returns an object, but the module
-    // can return a function as the exported value.
-    d3ArraysFactory.name = 'ember-d3-arrays-shim';
-    console.log('ember-d3-shim', d3ArraysFactory);
-    return d3ArraysFactory;
-}));
-
-// var path = require('path');
-
-// module.exports = {
-//   name: 'ember-d3-arrays-shim',
-
-// //   init: function(name) {
-// //     var assets_path = require('path').join('d3-arrays','index.js');
-// //     this.treePaths.vendor = require.resolve('d3-arrays').replace(assets_path, '');
-// //   },
-
-// //   included: function(app) {
-// //     // console.log('d3-arrays included', app);
-
-// //     // this.app.import(path.join(this.app.project.nodeModulesPath, 'd3-arrays', 'src', 'index.js'));
-
-// //     // var options = this.app.options.icAjaxOptions || {enabled: true};
-
-// //     // if (options.enabled) {
-// //     //   this.app.import('vendor/ic-ajax/dist/named-amd/main.js', {
-// //     //     exports: {
-// //     //       'ic-ajax': [
-// //     //         'default',
-// //     //         'defineFixture',
-// //     //         'lookupFixture',
-// //     //         'raw',
-// //     //         'request',
-// //     //       ]
-// //     //     }
-// //     //   });
-// //     // }
-// //   }
-// };
+};
