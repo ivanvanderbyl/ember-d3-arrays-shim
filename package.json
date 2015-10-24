@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/ivanvanderbyl/ember-d3-arrays-shim",
   "dependencies": {
+    "broccoli-merge-trees": "^0.2.3",
     "d3-arrays": "0.0.4"
   }
 }
