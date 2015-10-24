@@ -24,7 +24,7 @@ ember install ember-d3-arrays-shim
 
 # Documentation
 
-Full API documentation is available on the actual [D3-Arrays repository](/d3/d3-arrays).
+Full API documentation is available on the actual [D3-Arrays repository](https://github.com/d3/d3-arrays).
 
 # License
 
