@@ -1,3 +1,7 @@
+*DEPRECATED*
+
+Use [ember-cli-d3-primitive](https://github.com/ivanvanderbyl/ember-cli-d3-primitive)
+
 # Ember D3 Arrays shim
 
 D3.js version 4.x is written in ES2015 compatible code, but ember CLI cannot natively load this module. This shim loads the D3 Array source tree so you can use specific functions from D3 Arrays without loading the entire D3 library.
